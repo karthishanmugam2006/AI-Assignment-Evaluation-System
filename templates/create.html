@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><title>Create Assignment</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><main><h1>Create Assignment</h1>
+<form method="post">
+<label>Title</label><input name="title" required>
+<label>Description</label><textarea name="description"></textarea>
+<div id="questions">
+<div class="card"><h3>Question 1</h3>
+<label>Question</label><textarea name="question_1" required></textarea>
+<label>Model Answer</label><textarea name="model_answer_1" required></textarea>
+<label>Keywords (comma separated)</label><input name="keywords_1">
+<label>Maximum Marks</label><input type="number" name="max_marks_1" value="10" min="1"></div>
+</div>
+<button type="button" class="btn secondary" onclick="addQ()">Add Question</button>
+<button class="btn" type="submit">Create</button>
+</form></main>
+<script>
+let n=1;
+function addQ(){
+ n++;
+ const d=document.createElement("div"); d.className="card";
+ d.innerHTML=`<h3>Question ${n}</h3>
+ <label>Question</label><textarea name="question_${n}" required></textarea>
+ <label>Model Answer</label><textarea name="model_answer_${n}" required></textarea>
+ <label>Keywords (comma separated)</label><input name="keywords_${n}">
+ <label>Maximum Marks</label><input type="number" name="max_marks_${n}" value="10" min="1">`;
+ document.getElementById("questions").appendChild(d);
+}
+</script></body></html>

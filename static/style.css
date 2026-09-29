@@ -1,0 +1,6 @@
+body{font-family:Arial,sans-serif;background:#f3f6fb;color:#172033;margin:0}
+main{width:min(950px,92%);margin:35px auto}header,.card{background:white;padding:24px;border-radius:14px;margin:18px 0;box-shadow:0 4px 18px #0001}
+header{background:#164477;color:white}label{display:block;font-weight:bold;margin:14px 0 6px}
+input,textarea{width:100%;box-sizing:border-box;padding:11px;border:1px solid #ccd5e2;border-radius:8px;font-size:15px}
+textarea{resize:vertical}.btn{display:inline-block;background:#1769aa;color:white;border:0;border-radius:8px;padding:11px 16px;text-decoration:none;cursor:pointer;margin-top:12px}
+.secondary{background:#596b7d;margin-right:8px}h1{margin-top:0}

@@ -1,0 +1,14 @@
+<!doctype html>
+<html><head><title>Result</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><main><h1>Evaluation Result</h1>
+<section class="card"><h2>{{ submission.student_name }}</h2>
+<p><strong>{{ total }} / {{ maximum }}</strong> ({{ percentage }}%)</p></section>
+{% for a in answers %}<section class="card"><h3>Q{{ loop.index }}. {{ a.question }}</h3>
+<p><strong>Answer:</strong> {{ a.student_answer }}</p>
+<p><strong>Score:</strong> {{ a.final_score }} / {{ a.max_marks }}</p>
+<p><strong>Semantic Similarity:</strong> {{ (a.similarity*100)|round(2) }}%</p>
+<p><strong>Concept Coverage:</strong> {{ (a.keyword_score*100)|round(2) }}%</p>
+<p><strong>Feedback:</strong> {{ a.feedback }}</p></section>{% endfor %}
+<a class="btn" href="{{ url_for('index') }}">Home</a>
+</main></body></html>

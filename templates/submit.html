@@ -1,0 +1,9 @@
+<!doctype html>
+<html><head><title>Submit</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><main><h1>{{ assignment.title }}</h1><p>{{ assignment.description }}</p>
+<form method="post"><label>Student Name</label><input name="student_name" required>
+{% for q in questions %}<section class="card"><h3>Q{{ loop.index }}. {{ q.question }}</h3>
+<p>Maximum Marks: {{ q.max_marks }}</p>
+<textarea name="answer_{{ q.id }}" rows="7" required></textarea></section>{% endfor %}
+<button class="btn">Submit & Evaluate</button></form></main></body></html>

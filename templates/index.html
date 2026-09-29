@@ -1,0 +1,13 @@
+<!doctype html>
+<html><head><title>AI Assignment Evaluation</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body><main>
+<header><h1>AI-Based Assignment Evaluation System</h1>
+<p>Automated assignment evaluation using NLP</p>
+<a class="btn" href="{{ url_for('create') }}">Create Assignment</a></header>
+<h2>Assignments</h2>
+{% for a in assignments %}
+<section class="card"><h3>{{ a.title }}</h3><p>{{ a.description }}</p>
+<a class="btn" href="{{ url_for('submit', assignment_id=a.id) }}">Submit Assignment</a></section>
+{% else %}<section class="card">No assignments available.</section>{% endfor %}
+</main></body></html>
