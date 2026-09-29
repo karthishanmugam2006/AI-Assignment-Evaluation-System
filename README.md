@@ -224,7 +224,7 @@ AI-generated scores are intended to assist evaluation. Teachers should review an
 
 ## 👨‍💻 Author
 
-**YOUR NAME**
+**Karthikeyan**
 
 GitHub: `https://github.com/YOUR_USERNAME`
 
